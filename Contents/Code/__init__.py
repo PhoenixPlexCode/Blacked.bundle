@@ -155,8 +155,6 @@ class EXCAgent(Agent.Movies):
                     Log("ID: " + curID)
                     releasedDate = searchResult.xpath('.//div[@class="videolist-caption-date"]')[0].text_content()
 
-                    #releasedDate = popOverContents[releasedPos+9:releasedPos+19]
-
                     Log(str(curID))
                     lowerResultTitle = str(titleNoFormatting).lower()
                     if searchByDateActor != True:
@@ -164,7 +162,7 @@ class EXCAgent(Agent.Movies):
                     else:
                         searchDateCompare = datetime.strptime(searchDate, '%Y-%m-%d').strftime('%B %d, %y')
                         score = 102 - Util.LevenshteinDistance(searchDateCompare.lower(), releasedDate.lower())
-                    titleNoFormatting = titleNoFormatting + " [" + releasedDate + "]"
+                    titleNoFormatting = titleNoFormatting + " [" + searchSites[siteNum][1] + ", " + releasedDate + "]"
                     results.Append(MetadataSearchResult(id = curID + "|" + str(siteNum), name = titleNoFormatting, score = score, lang = lang))
                         
                 results.Sort('score', descending=True)         
@@ -222,7 +220,7 @@ class EXCAgent(Agent.Movies):
 
             # Posters/Background
             posters = detailsPageElements.xpath('//div[@class="swiper-slide"]')
-            background = detailsPageElements.xpath('//img[@class="player-img player-img-denied transparent"]')[0].get("src")
+            background = detailsPageElements.xpath('//img[contains(@class,"player-img")]')[0].get("src")
             metadata.art[background] = Proxy.Preview(HTTP.Request(background, headers={'Referer': 'http://www.google.com'}).content, sort_order = 1)
             posterNum = 1
             for posterCur in posters:
@@ -276,7 +274,7 @@ class EXCAgent(Agent.Movies):
 
             # Posters/Background
             posters = detailsPageElements.xpath('//div[@class="swiper-slide"]')
-            background = detailsPageElements.xpath('//img[@class="player-img transparent"]')[0].get("src")
+            background = detailsPageElements.xpath('//img[contains(@class,"player-img")]')[0].get("src")
             metadata.art[background] = Proxy.Preview(HTTP.Request(background, headers={'Referer': 'http://www.google.com'}).content, sort_order = 1)
             posterNum = 1
             for posterCur in posters:
