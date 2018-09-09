@@ -17,7 +17,7 @@ Currently the features of this metadata agent are:
 
 File Naming
 ============
-** Plex Video Files Scanner needs to be set as the library scanner for best results. **
+**Plex Video Files Scanner needs to be set as the library scanner for best results.
 For best results, file names should follow the layout below
 Site - Scene Title.[ext]
 Site - YYYY-MM-DD - Porn Star Names.[ext]
