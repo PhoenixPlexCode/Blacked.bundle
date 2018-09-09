@@ -18,18 +18,20 @@ Currently the features of this metadata agent are:
 File Naming
 ============
 **Plex Video Files Scanner needs to be set as the library scanner for best results.
+
 For best results, file names should follow the layout below
-Site - Scene Title.[ext]
-Site - YYYY-MM-DD - Porn Star Names.[ext]
-Site - YYYY-MM-DD - Porn Star Name Porn Star Name.[ext]
+
+- Site - Scene Title.[ext]
+- Site - YYYY-MM-DD - Porn Star Names.[ext]
+- Site - YYYY-MM-DD - Porn Star Name Porn Star Name.[ext]
 
 Examples:
-Blacked.com - Hot Vacation Adventures.mp4
-Blacked.com - 2018-09-07 - Alecia Fox.mp4
-Blacked.com - 2018-09-07 - Alecia Fox Joss Lescaf.mp4
-Blackedraw.com - Pass Me Around.mp4
-Blacked.com - 2018-09-04 - Haley Reed.mp4
-Blacked.com - 2018-09-04 - Haley Reed Jason Luv.mp4
+- Blacked.com - Hot Vacation Adventures.mp4
+- Blacked.com - 2018-09-07 - Alecia Fox.mp4
+- Blacked.com - 2018-09-07 - Alecia Fox Joss Lescaf.mp4
+- Blackedraw.com - Pass Me Around.mp4
+- Blacked.com - 2018-09-04 - Haley Reed.mp4
+- Blacked.com - 2018-09-04 - Haley Reed Jason Luv.mp4
 
 The site can be missing from the filename, but both sites will then be searched possibly causing a mismatch.
 
